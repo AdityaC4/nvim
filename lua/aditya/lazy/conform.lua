@@ -56,6 +56,8 @@ return { -- Autoformat
       c = { "clang_format" },
       cpp = { "clang_format" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
+      html = { "prettierd", "prettier", stop_after_first = true },
+      css = { "prettierd", "prettier", stop_after_first = true },
       -- json = { "jq" },
       -- jsonc = { "jq" },
     },
