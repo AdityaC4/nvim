@@ -1,1 +1,2 @@
 Just my neovim config
+..
