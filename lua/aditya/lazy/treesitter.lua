@@ -14,6 +14,8 @@ return {
         "bash",
         "vim",
         "query",
+        "markdown",
+        "markdown_inline",
       },
 
       sync_install = false,
@@ -27,8 +29,15 @@ return {
 
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = { "markdown" },
+        additional_vim_regex_highlighting = false,
       },
+    })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "markdown",
+      callback = function(args)
+        vim.treesitter.start(args.buf)
+      end,
     })
   end,
 }
